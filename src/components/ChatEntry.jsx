@@ -5,10 +5,10 @@ import TimeStamp from './TimeStamp';
 const ChatEntry = (props) => {
 
   const likeButtonClicked = () => {
-    props.onToggleLike(props.id);
+    props.toggleLike(props.id);
   };
 
-  const heartIcon = props.isLiked ? '❤️' : '🤍';
+  const heartIcon = props.liked ? '❤️' : '🤍';
 
   return (
     <div className="chat-entry local">
@@ -27,8 +27,7 @@ ChatEntry.propTypes = {
   sender: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
-  isLiked: PropTypes.bool.isRequired,
-  onToggleLike: PropTypes.func.isRequired,
+  liked: PropTypes.bool.isRequired,
 };
 
 export default ChatEntry;

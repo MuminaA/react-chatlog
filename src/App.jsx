@@ -29,7 +29,7 @@ const App = () => {
         </div>
       </header>
       <main>
-        <ChatLog entries={messageData} onToggleLike={toggleLike} />
+        <ChatLog entries={messageData} toggleLike={toggleLike} />
       </main>
     </div>
   );

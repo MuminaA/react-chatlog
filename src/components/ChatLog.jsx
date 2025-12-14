@@ -13,8 +13,8 @@ const ChatLog = (props) => {
           sender={message.sender}
           body={message.body}
           timeStamp={message.timeStamp}
-          isLiked={message.liked}
-          onToggleLike={props.onToggleLike}
+          liked={message.liked}
+          toggleLike={props.toggleLike}
         />
       ))}
     </div>
@@ -28,10 +28,10 @@ ChatLog.propTypes = {
       sender: PropTypes.string,
       body: PropTypes.string,
       timeStamp: PropTypes.string,
-      isLiked: PropTypes.bool,
+      liked: PropTypes.bool,
+      toggleLike: PropTypes.func,
     })
   ).isRequired,
-  onToggleLike: PropTypes.func.isRequired,
 };
 
 export default ChatLog;
