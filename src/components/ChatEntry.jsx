@@ -11,14 +11,14 @@ const ChatEntry = (props) => {
   const heartIcon = props.liked ? '❤️' : '🤍';
 
   return (
-    <div className="chat-entry local">
+    <article className="chat-entry local">
       <h2 className="entry-name">{props.sender}</h2>
       <section className="entry-bubble">
         <p>{props.body}</p>
         <p className="entry-time"><TimeStamp time={props.timeStamp} /></p>
         <button className="like" onClick={likeButtonClicked}>{heartIcon}</button>
       </section>
-    </div>
+    </article>
   );
 };
 
@@ -28,6 +28,7 @@ ChatEntry.propTypes = {
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
   liked: PropTypes.bool.isRequired,
+  toggleLike: PropTypes.func.isRequired,
 };
 
 export default ChatEntry;

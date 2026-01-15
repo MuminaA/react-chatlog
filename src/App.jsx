@@ -8,8 +8,7 @@ const App = () => {
 
   const toggleLike = (id) => {
     const updateMessages = messageData.map((message) => {
-      if (message.id === id)
-      {
+      if (message.id === id) {
         return {...message, liked: !message.liked};
       } else {
         return message;
@@ -23,9 +22,9 @@ const App = () => {
   return (
     <div id="App">
       <header>
-        <h1>Chat between Vladimir and Estrogen </h1>
-        <div className=''>
-          <strong>{likeCount} ❤️s</strong>
+        <h1>Chat between Vladimir and Estragon </h1>
+        <div className="like-count">
+          <strong>{likeCount} ❤️'s</strong>
         </div>
       </header>
       <main>
