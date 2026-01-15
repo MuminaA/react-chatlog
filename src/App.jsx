@@ -24,7 +24,7 @@ const App = () => {
       <header>
         <h1>Chat between Vladimir and Estragon </h1>
         <div className="like-count">
-          <strong>{likeCount} ❤️'s</strong>
+          <strong>{likeCount} ❤️s</strong>
         </div>
       </header>
       <main>
